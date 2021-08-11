@@ -19,20 +19,6 @@ examples of webscraping gone bad -
 
 
 
-[Markdown](https://daringfireball.net/projects/markdown/) is a standard to [simplify writing](https://evanwill.github.io/_drafts/notes/writing-markdown.html) content for the web. 
-[GitHub markdown flavor](https://help.github.com/articles/basic-writing-and-formatting-syntax/) can be used any where on GitHub and in Jekyll.
-The basics are intuitive, you can learn in about a minute!
-See [Markdown in a Minute](https://evanwill.github.io/_drafts/notes/markdown-minute.html) to get started.
-
-At the top of each page is "YML front matter" used to configure the page.
-Use these options:
-
-- to include a page in the header and footer navigation, add `nav:` push the text you want to appear to the file's yml front matter. Alternatively, add `nav: true` to use the page's `title:` value. All pages with a `nav` value will appear in the top-bar, sorted by order of filenames. For simplicity use leading numbers in the lesson page filenames to create correct order.
-- `title:` value will appear as `h1` at the top of the page.
-- `topics:` will appear as a small feature below the title (optional). 
-- `description:` will appear as an indented text block below the title (optional). This gives you a chance to summarize the section contents. 
-- `youtubeid:` will add an YouTube video embed (optional). Find the id in the YouTube link. For example, in `https://youtu.be/moJgWrD6dwg` or `https://www.youtube.com/watch?v=moJgWrD6dwg` the youtubeid is `moJgWrD6dwg`.
-- Alternatively, if you don't want `title` or other options to appear on the page, you can over ride the layout by adding `layout: default` 
 
 ## Ethical consderations
 
@@ -55,9 +41,25 @@ Examples below demonstrate the includes.
 
 ## good practice/bad practice
 
-`{% raw %}{% include figure.html img="uidaho-workshop.jpg" alt="workshop scene" caption="Library workshops!" width="75%" %}{% endraw %}`
+https://www.empiricaldata.org/dataladyblog/a-guide-to-ethical-web-scraping
 
-{% include figure.html img="uidaho-workshop.jpg" alt="workshop scene" caption="Library workshops!" width="75%" %}
+THE API WAY IS OFTEN THE BEST WAY
+Some websites have their own APIs built specifically for you to gather data without having to scrape it. This means that you’d be doing it according to their rules; you have been authorized to get the information. So, if there’s an API, use it instead of scraping.
+
+RESPECT THE ROBOTS.TXT
+Also known as Robots Exclusion Standard, the robots.txt file is what indicates the web-crawling software where it is allowed (or not allowed) within the website. This is part of the Robots Exclusion Protocol (REP) which are a group of web standards created as a way to regulate how robots crawl the web.
+
+READ THE TERMS AND CONDITIONS
+This is the main way the website owner tells you the rules. Yes, it’s easier to just click “I agree” or “I accept” and hope for the best. Remember they wrote those for a reason. They are talking to you, listen to what they have to say.
+
+BE GENTLE
+The process of scraping can be pretty harsh on the server, and aggressive scraping can sometimes lead to functionality issues, generating a bad user experience for human users. So, make a habit to do the scraping off-peak hours. And don’t forget to space out the requests so the website’s owner won’t confuse your scraping for a DDoS attack.
+
+IDENTIFY YOURSELF
+The website’s administrator may notice some unusual traffic happening. Manners come first, so let them know who you are, your intentions, and how to contact you for more questions. You can do this by simply adding a User-Agent string with your information, so they will be able to see it. Is that simple.
+
+ASK FOR PERMISSION
+Some basic human courtesy is always appreciated. They have something that you want, be courteous and ask before assuming the information is free for you to take. Remember: the data doesn’t belong to you.
 
 ----------
 
@@ -67,35 +69,10 @@ Examples below demonstrate the includes.
 
 {% include alert.html text="This is a [Bootstrap Alert](https://getbootstrap.com/docs/4.1/components/alerts/)" align="center" color="success" %}
 
------------
 
-#### Link Buttons 
-
-`{% raw %}{% include button.html text="Bootstrap Docs" link="https://getbootstrap.com/docs/4.1/components/buttons/" color="info" %}{% endraw %}`
-
-{% include button.html text="Bootstrap Docs" link="https://getbootstrap.com/docs/4.1/components/buttons/" color="info" %}
 
 ---------
 
-#### Cards
-
-```{% raw %}
-{% capture text %}
-1. Can add more complex text using markdown.
-2. Use a Liquid capture to create the text.
-3. It magically becomes a [Bootstrap Card](https://getbootstrap.com/docs/4.1/components/card/).
-{% endcapture %}
-{% include card.html text=text header="Example Card" title="Title example" img="uidaho-workshop.jpg" %}{% endraw %}
-```
-
-{% capture text %}
-1. Can add more complex text using markdown.
-2. Use a Liquid capture to create the text.
-3. It magically becomes a [Bootstrap Card](https://getbootstrap.com/docs/4.1/components/card/).
-{% endcapture %}
-{% include card.html text=text header="Example Card" title="Title example" img="uidaho-workshop.jpg" %}
-
-------------
 
 #### Modal
 

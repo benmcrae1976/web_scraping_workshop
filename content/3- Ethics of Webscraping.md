@@ -40,18 +40,20 @@ Examples below demonstrate the includes.
 --------
 
 ## good practice/bad practice
+This section is adapated from the following article
+https://www.empiricaldata.org/dataladyblog/a-guide-to-ethical-web-scraping -
 
-https://www.empiricaldata.org/dataladyblog/a-guide-to-ethical-web-scraping - direct quote at present
-
-THE API WAY IS OFTEN THE BEST WAY
-Some websites have their own APIs built specifically for you to gather data without having to scrape it. This means that you’d be doing it according to their rules; you have been authorized to get the information. So, if there’s an API, use it instead of scraping.
-
-RESPECT THE ROBOTS.TXT
-Also known as Robots Exclusion Standard, the robots.txt file is what indicates the web-crawling software where it is allowed (or not allowed) within the website. This is part of the Robots Exclusion Protocol (REP) which are a group of web standards created as a way to regulate how robots crawl the web.
+Before you scrape look for the following things 
 
 READ THE TERMS AND CONDITIONS
 This is the main way the website owner tells you the rules. Yes, it’s easier to just click “I agree” or “I accept” and hope for the best. Remember they wrote those for a reason. They are talking to you, listen to what they have to say.
+RESPECT THE ROBOTS.TXT
+Also known as Robots Exclusion Standard, the robots.txt file is what indicates the web-crawling software where it is allowed (or not allowed) within the website. This is part of the Robots Exclusion Protocol (REP) which are a group of web standards created as a way to regulate how robots crawl the web.
 
+Where an API is avaiable use it.  even if you are not able to get exactly the data you would like from the page.  The API is there specifically for you to gather their data, it is  their data so get authorisation and use this data over scraping. 
+
+
+if you need to scrape 
 BE GENTLE
 The process of scraping can be pretty harsh on the server, and aggressive scraping can sometimes lead to functionality issues, generating a bad user experience for human users. So, make a habit to do the scraping off-peak hours. And don’t forget to space out the requests so the website’s owner won’t confuse your scraping for a DDoS attack.
 
@@ -61,6 +63,7 @@ The website’s administrator may notice some unusual traffic happening. Manners
 ASK FOR PERMISSION
 Some basic human courtesy is always appreciated. They have something that you want, be courteous and ask before assuming the information is free for you to take. Remember: the data doesn’t belong to you.
 
+look after the data you gather 
 
 VALUE THE CONTENT YOU KEEP
 You should only take the kind of content that you need. And always have a good reason for getting the content in the first place. The purpose of using the data is to create more value, not duplicate it. 
